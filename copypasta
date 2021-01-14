@@ -22,10 +22,10 @@ this.options = {
  
   // MAP SETTINGS : 
  
-  //map_size: 80,
+  //map_size: 40,
   //map_id: 4971,
-  crystal_value: 10,
-  asteroids_strength: 1,
+  crystal_value: 69,
+  asteroids_strength: 0.1,
   weapon_drop: 10,
   friction_ratio: 0.5,
   speed_mod: 10,
