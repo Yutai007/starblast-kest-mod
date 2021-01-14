@@ -8,7 +8,7 @@ this.options = {
   map_name: "K.E.S.T. v1.6.9",
   root_mode: "team",
   starting_ship: 102,
-  starting_ship_maxed: true
+  starting_ship_maxed: false,
   max_level: 7,
   max_players: 160,
   friendly_colors: teams,
