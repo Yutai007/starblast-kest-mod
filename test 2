@@ -369,3 +369,82 @@ this.event = function(event,game) {
   }
  
 };
+
+addAliens = (ammount,x,y,code,level,points,crystals,weapon_drop) => {
+  for (let i = 0; i<ammount; i++){
+    game.addAlien({
+      x:x,y:y,
+      code:code,
+      level:level,
+      points:points,
+      crystals:crystals,
+      weapon_drop:weapon_drop
+    });
+  }
+  switch (code){
+    case 10:
+      alien_type = "Chicken";
+    break;  
+    case 11:
+      alien_type = "Crab";
+    break;  
+    case 12:
+      alien_type = "Fortress";
+    break;  
+    case 13:
+      alien_type = "Caterpillar";
+    break;        
+    case 14:
+      alien_type = "Candlestick";
+    break;        
+    case 15:
+      alien_type = "Hirsute";
+    break;        
+    case 16:
+      alien_type = "Piranha";
+    break;        
+    case 17:
+      alien_type = "Pointu";
+    break;        
+    case 18:
+      alien_type = "Fork";
+    break;        
+    case 19:
+      alien_type = "Saucer";
+    break;        
+    case 20:
+      alien_type = "FinalBoss";
+  }
+  switch(weapon_drop){
+    case 10:
+      collectible = "Rockets";
+    break;
+    case 11:
+      collectible = "Missiles";
+    break;
+    case 12:
+      collectible = "Torpedo";
+    break;
+    case 20:
+      collectible = "Light mines";
+    break;
+    case 21:
+      collectible = "Heavy mines";
+    break;
+    case 40:
+      collectible = "Mining pod";
+    break;
+    case 41:
+      collectible = "Attack pod";
+    break;
+    case 42:
+      collectible = "Defense pod";
+    break;
+    case 90:
+      collectible = "Energy refill";
+    break; 
+    case 91:
+      collectible = "Shield refill";
+  }  
+  return "\nSpawned "+ammount+" level "+level+" "+alien_type+" to coordinates x:"+x+" y:"+y+"\ndropping "+crystals+" crystals, "+points+" points, and a single\n"+collectible+" upon destruction\n";
+};
